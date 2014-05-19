@@ -1,3 +1,10 @@
+# For original project README, see "Original README" section
+This fork of JSONAPI will be fixed to work with the MCServerAdmin website without as much setup. I also aim to patch some of the bugs with JSONAPI, which I will offer to merge back into the main branch at [alecgorge/jsonapi](https://github.com/alecgorge/jsonapi).
+
+# Original README
+The following text is an exact clone of the README at the time of forking:
+
+
 JSONAPI is a plugin for Bukkit that allows you to access data and other information about your server and your players through a simple, yet secure, HTTP API. This allows you to make **awesome websites**, **iPhone apps**, and a way for your **players to purchase goods online and automatically receive them in game**.
 
 However, this plugin won't do all of that by itself. It is simply an API that allows you to assemble the features in a way that makes sense for your needs.
