@@ -16,7 +16,7 @@
 	<groupId>com.alecgorge.minecraft.jsonapi</groupId>
 	<artifactId>JSONAPI</artifactId>
 	<packaging>jar</packaging>
-	<version>${jsonapiVersion}-mc${cbVersion}</version>
+	<version>${jsonapiVersion}-mc1.6.4-R2.1-SNAPSHOT</version>
 	<name>JSONAPI</name>
 	<url>http://github.com/alecgorge/jsonapi</url>
 	<scm>
@@ -256,7 +256,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>craftbukkit</artifactId>
-			<version>${cbVersion}</version>
+			<version>1.6.4-R2.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.igormaznitsa</groupId>
