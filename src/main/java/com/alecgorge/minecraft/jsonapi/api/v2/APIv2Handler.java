@@ -168,14 +168,7 @@ public class APIv2Handler {
 					
 					JSONAPIAuthResponse a = r.testLogin(false);
 					b.append("{").append(a.isAuthenticated() ? " [AUTHED] " : " [NOT AUTHED] ").append(", ");
-					if (requests.get(0).getUsername() == "mcserveradmin")
-					{
-						b.append("MCSERVERADMIN: SKIPPED PERMISSION CHECK");
-					}
-					else
-					{
-						b.append(a.isAllowed() ? " [ALLOWED (" + requests.get(0).getUsername() + ")] " : " [NOT ALLOWED] ");
-					}
+					b.append(a.isAllowed() ? " [ALLOWED (" + requests.get(0).getUsername() + ")] " : " [NOT ALLOWED] ");
 					Caller c = JSONAPI.instance.jsonServer.getCaller();
 					
 					if(!c.methodExists(r.getMethodName()) && !JSONAPI.instance.getStreamManager().streamExists(r.getMethodName())) {
