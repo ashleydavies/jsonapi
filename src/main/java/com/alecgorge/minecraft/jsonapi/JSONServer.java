@@ -144,6 +144,7 @@ public class JSONServer extends NanoHTTPD {
 		}
 		
         outLog.info("[JSONAPI] -------------------------------------");
+        outLog.info("[JSONAPI] RUNNING MCSERVERADMIN JSONAPI MOD V0.1");
 	}
 	
 	

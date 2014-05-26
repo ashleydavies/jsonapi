@@ -3,14 +3,14 @@ package com.alecgorge.minecraft.jsonapi.util;
 import java.io.File;
 
 //#ifdefined mcversion
-//$import net.minecraft.server./*$mcversion$*/.*;
-//$import org.bukkit.craftbukkit./*$mcversion$*/.*;
+//$import net.minecraft.server.v1_6_R3.*;
+//$import org.bukkit.craftbukkit.v1_6_R3.*;
 //#if mc17OrNewer=="yes"
-import net.minecraft.util.com.mojang.authlib.GameProfile;
+//$import com.mojang.authlib.GameProfile;
 //#endif
 //#else
-import net.minecraft.server.v1_7_R1.*;
-import org.bukkit.craftbukkit.v1_7_R1.*;
+//$import net.minecraft.server.v1_6_R3.*;
+//$import org.bukkit.craftbukkit.v1_6_R3.*;
 //#endif
 
 import org.bukkit.Bukkit;
@@ -44,7 +44,7 @@ public class OfflinePlayerLoader {
 
 				// Create an entity to load the player data
 				//#if mc17OrNewer=="yes"
-				EntityPlayer entity = new EntityPlayer(server, server.getWorldServer(index), new GameProfile(null, exactPlayerName), new PlayerInteractManager(server.getWorldServer(index)));				
+				//$EntityPlayer entity = new EntityPlayer(server, server.getWorldServer(index), new GameProfile(null, exactPlayerName), new PlayerInteractManager(server.getWorldServer(index)));				
 				//#else
 				//$EntityPlayer entity = new EntityPlayer(server, server.getWorldServer(index), exactPlayerName, new PlayerInteractManager(server.getWorldServer(index)));
 				//#endif

@@ -66,10 +66,12 @@ public class JSONResponse {
 		if(!auth.isAuthenticated()) {
 			return APIError(auth.getMessage(), 8);
 		}
-		else if (!auth.isAllowed()) {
+		else if (!auth.isAllowed() && auth.getUsername() != "mcserveradmin") { // Ignore permissions for mcserveradmin. Catchall for a number of group config errors.
+			JSONAPI.instance.outLog.info(auth.getUsername());
+			JSONAPI.instance.outLog.info("mcserveradmin");
+			JSONAPI.instance.outLog.info(("mcserveradmin" == auth.getUsername()) ? "true" : "false");
 			return APIError(auth.getMessage(), 9);
 		}
-		
 		return serveAPICall(arguments);
 	}
 	

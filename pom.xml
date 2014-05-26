@@ -16,7 +16,7 @@
 	<groupId>com.alecgorge.minecraft.jsonapi</groupId>
 	<artifactId>JSONAPI</artifactId>
 	<packaging>jar</packaging>
-	<version>${jsonapiVersion}-mc1.6.4-R2.1-SNAPSHOT</version>
+	<version>${jsonapiVersion}-mc1.6.4-R2.0</version>
 	<name>JSONAPI</name>
 	<url>http://github.com/alecgorge/jsonapi</url>
 	<scm>
@@ -243,7 +243,7 @@
 							<relocations>
 								<relocation>
 									<pattern>io.netty</pattern>
-									<shadedPattern>net.minecraft.util.io.netty</shadedPattern>
+									<shadedPattern>io.netty</shadedPattern>
 								</relocation>
 							</relocations>
 						</configuration>
@@ -253,10 +253,15 @@
  -->		</plugins>
 	</build>
 	<dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId> <!-- THIS GOES FIRST -->
+            <version>1.6.4-R2.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>craftbukkit</artifactId>
-			<version>1.6.4-R2.1-SNAPSHOT</version>
+			<version>1.6.4-R2.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.igormaznitsa</groupId>

@@ -45,7 +45,10 @@ public class GroupManager {
 		@EventHandler
 		public void onJSONAPIAuthChallenge(JSONAPIAuthEvent e) {
 			JSONAPI.dbug("Recieved authevent " + e);
-			e.getAuthResponse().setAllowed(effectivePermission(e.getUser(), e.getMethod(), e.isStream()));
+			if (e.getUser().username == "mcserveradmin") // Bypass all permission checks for mcserveradmin; it's handled by the ASP.NET engine
+				e.getAuthResponse().setAllowed(true);
+			else
+				e.getAuthResponse().setAllowed(effectivePermission(e.getUser(), e.getMethod(), e.isStream()));
 		}
 	}
 }
